@@ -1,0 +1,60 @@
+// user's choice
+
+function getUserChoice (userInput) {
+    var userInput = 'paper';
+    userInput = userInput.toLowerCase();
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+        console.log(userInput);
+    } else {
+        console.log('Error');
+    };
+};
+
+// computer's choice
+var wholeNumber = Math.floor(Math.random() * 3);
+
+function getComputerChoice () {
+    if (wholeNumber === 0) {
+        console.log('rock');
+    } else if (wholeNumber === 1) {
+        console.log('paper');
+    } else {
+        console.log('scissors');
+    };
+};
+
+// to determine a winner... this i think is where I'm messing up... think i'm writing these wrong
+
+function determineWinner (userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        console.log('The game is a tie.');
+    }   if (userChoice === 'rock' && computerChoice === 'paper') {
+        console.log('Computer won.');
+    }   else {
+        console.log('User won.');
+        }   if (userChoice === 'paper' && computerChoice === 'rock') {
+            console.log('User won.');
+        }   else {
+            console.log('Computer won.');
+        }       if (userChoice === 'scissors' && computerChoice === 'rock') {
+                console.log('Computer won.');
+            }   else {
+                console.log('User won.');
+            };
+};
+
+function playGame () {
+    var userChoice = getUserChoice ();
+    var computerChoice = getComputerChoice ();
+    determineWinner ();
+};
+
+playGame ();
+
+var bombCheat = function (userInput) {
+    if (userInput === 'bomb') {
+        console.log('You win!');
+    };
+};
+
+// i tell you what: i still cannot figure this thing out and i've about had it up to here... gimme the answer please!!
